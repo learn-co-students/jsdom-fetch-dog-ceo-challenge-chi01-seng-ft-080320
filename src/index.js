@@ -28,11 +28,20 @@ function appendBreeds(breeds){
     Object.keys(breeds.message).forEach(function(breed){
         let liTag = document.createElement("li")
         liTag.innerHTML = breed 
+        liTag.class = breed
         let breedContainer = document.getElementById("dog-breeds")
         breedContainer.append(liTag)
+    })
+}
+
+function clickColor(){
+    const click = document.getElementById("dog-breeds")
+    click.addEventListener("click", function(){
+    event.target.style.color = "red"
     })
 }
 
 //invoked functions
 fetchImage()
 fetchBreeds()
+clickColor()
