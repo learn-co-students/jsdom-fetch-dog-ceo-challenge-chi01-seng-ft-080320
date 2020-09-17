@@ -51,8 +51,8 @@ function filterDogs(event){
     let liTagArray = Array.from(liTag)
     
     liTagArray.forEach(function(liElement){
-    firstLetter = liElement.textContent[0]
-        firstLetter === event.target.value ? liElement.style.display = 'block':liElement.style.display = 'none'
+    let firstLetter = liElement.textContent[0]
+        firstLetter === event.target.value ? liElement.style.display = 'block' : liElement.style.display = 'none'
     })     
 }
     
